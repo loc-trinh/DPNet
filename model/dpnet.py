@@ -52,7 +52,7 @@ class DPNet(nn.Module):
         the feature input to prototype layer
         '''
         x = self.features(x)
-        x = nn.AvgPool2d(16)(x)
+        x = nn.AvgPool2d(4)(x)
         x = self.add_on_layers(x)
         return x
 
